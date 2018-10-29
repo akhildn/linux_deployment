@@ -1,0 +1,55 @@
+{% extends 'guest/index.html' %}
+{% block content %}
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1 padding-top">
+             <h4>New Menu Item</h4>
+        </div>
+    </div>
+
+    <div class="row pt-3">
+        <div class="col-md-6 col-md-offset-1 padding-top">
+            <form action="#" method = "post">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type ="text" maxlength="50" class="form-control" name="name"placeholder="Name of the course" required>
+                    <br>
+                    <label>Description:</label>
+                    <textarea class="form-control" maxlength="250" rows="3" name="description"
+                              placeholder="Description of the course" required></textarea>
+                    <br>
+                    <label>Price:</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">$&nbsp;</div>
+                        <input type ="text" class="form-control" maxlength="10" name="price" placeholder="Price in $" required>
+                    </div>
+                    <br>
+                    <label>Course:</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="course" id="course1" value="Appetizer" required>Appetizer
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="course" id="course2" value="Entree">Entree
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="course" id="course3" value="Dessert">Dessert
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="course" id="course4" value="Beverage">Beverage
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-sm btn-outline-secondary" id="submit">
+                        <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'guest/index.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="row p-5">
+    <div class = 'flash'>
+        <ul>
+            {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}
+{% endwith %}
+
+
+<div class="container pt-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <span class="float-md-left"><p class="h2"><b>Restaurants</b></p> </span>
+        </div>
+        <div class="col-md-6 text-center pt-2">
+            <span class="float-md-right">
+                <a href="{{url_for('newRestaurant')}}"> &nbsp;&nbsp;&nbsp;
+                <button class="btn-sm btn-outline-primary" id="new-Restaurant">
+                add restaurant
+                </button>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    {% set count = namespace(a=1) %}
+    {% for restaurant in restaurants %}
+    {% if(count.a %3 == 1) %}
+    <div class="row">
+        <div class="col-md-4">
+            <h2>{{restaurant.name}}</h2>
+            <p>Cuisine: {{restaurant.cuisine}}</p>
+            <p>Address: {{restaurant.address}}</p>
+            <p><a  class="btn btn-outline-primary" href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}">view restaurant</a></p>
+        </div>
+        {% elif (count.a%3 !=0) %}
+        <div class="col-md-4">
+            <h2>{{restaurant.name}}</h2>
+            <p>Cuisine: {{restaurant.cuisine}}</p>
+            <p>Address: {{restaurant.address}}</p>
+            <p><a  class="btn btn-outline-primary" href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}">view restaurant</a></p>
+        </div>
+        {% else %}
+        <div class="col-md-4">
+            <h2>{{restaurant.name}}</h2>
+            <p>Cuisine: {{restaurant.cuisine}}</p>
+            <p>Address: {{restaurant.address}}</p>
+            <p><a  class="btn btn-outline-primary" href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}">view restaurant</a></p>
+        </div>
+    </div>
+    <hr>
+    {% endif %}
+    {% set count.a = count.a + 1 %}
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'guest/index.html' %}
+{% block content %}
+<div class="container pt-5">
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cuisine:
+                </td>
+
+                <td>
+                    <input type="text" name="cuisine" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <input type="text" name="address">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" class="btn-sm btn-outline-success" value="add">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}
