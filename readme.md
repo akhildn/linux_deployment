@@ -1,19 +1,19 @@
 # Udacity Project: Linux Server Configuration
 
 ## Server details:
-- Server IP: 100.25.61.74 (Ubuntu 18.04)
+- Server IP: 100.25.61.74 (Ubuntu 18.04) (AWS Lightsail)
 - SSH port: 2200 (disabled port 22 for ssh)
 
 ## URL for web application deployed: http://catalog.anayabu.com or https://catalog..anayabu.com
 
 ## Users on server:
 - ubuntu (sudoer) 
-- grader (sudoer)
+- grader (sudoer) (created this user and ssh keys for login)
 
 ## Softwares installed on server:
 1. Finger
 2. Python3.5
-3. Apache2
+3. Apache2 
 4. PostgreSQL
 5. mod_wsgi for python3
 6. Pip 
@@ -31,7 +31,7 @@
 ## PostgreSQL
 - created user catalog
 - created database catalog
-- limited catalog user privilages only to catalog db
+- limited catalog user privilages only to catalog db (privilages as descriped in the requirements)
 
 ## Python modules installed
 1. Flask
