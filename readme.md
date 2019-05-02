@@ -4,7 +4,9 @@
 - Server IP: 100.25.61.74 (Ubuntu 18.04) (AWS Lightsail)
 - SSH port: 2200 (disabled port 22 for ssh)
 
-## URL for web application deployed: http://catalog.anayabu.com or https://catalog..anayabu.com
+## URL for web application deployed: http://catalog.anayabu.com or https://catalog.anayabu.com
+
+## Source: https://github.com/akhildn/udacity-catalog
 
 ## Users on server:
 - ubuntu (sudoer) 
